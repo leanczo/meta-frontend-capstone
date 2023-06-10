@@ -1,10 +1,12 @@
 .topbar {
   justify-content: space-between;
   background-color: white;
-  padding: 1rem 20rem 1rem 20rem;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   height: 4rem;
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
 .logo {

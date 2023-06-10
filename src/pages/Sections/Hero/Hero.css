@@ -1,12 +1,19 @@
-.hero {
+.hero-background{
   background: #495e57;
   height: 100%;
-  padding: 2rem 20rem 2rem 20rem;
+  display: flex;
+}
+
+.hero { 
+  height: 100%;
+  padding: 2rem 0;
   display: grid;
   align-items: center;
   grid-column-gap: 2rem;
   grid-template: "info image";
   grid-template-columns: 60fr 40fr;
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
 .title {

@@ -1,6 +1,8 @@
 .specials {
   height: 100%;
-  padding: 2rem 20rem 2rem 20rem;
+  padding: 2.5rem 0;
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
 .header-container {
@@ -9,10 +11,15 @@
   grid-column-gap: 2rem;
   grid-template: "info image";
   grid-template-columns: 85fr 15fr;
+  margin-bottom: 2rem;
 }
 
 .header-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.specials-title {
+  line-height: 10px;
 }

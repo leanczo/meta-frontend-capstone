@@ -1,0 +1,28 @@
+.testimonial-background {
+  background: #495e57;
+}
+
+.testimonials {
+  height: 100%;
+  padding: 2rem 0;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.testimonials-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 85fr 15fr;
+  margin-bottom: 2rem;
+}
+
+.testimonials-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimonial-title{
+    color: white;
+}
