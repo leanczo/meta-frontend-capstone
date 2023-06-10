@@ -23,6 +23,7 @@
   justify-content: space-between;
 }
 
-.testimonial-title{
-    color: white;
+.testimonial-title {
+  color: white;
+  line-height: 10px;
 }
