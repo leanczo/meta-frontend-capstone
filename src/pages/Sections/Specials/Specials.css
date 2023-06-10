@@ -1,0 +1,18 @@
+.specials {
+  height: 100%;
+  padding: 2rem 20rem 2rem 20rem;
+}
+
+.header-container {
+  display: grid;
+  align-items: center;
+  grid-column-gap: 2rem;
+  grid-template: "info image";
+  grid-template-columns: 85fr 15fr;
+}
+
+.header-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
