@@ -1,0 +1,36 @@
+.topbar {
+  justify-content:center;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+.logo {
+  height: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav{
+  display: flex;
+}
+
+ul{
+  display: flex;
+}
+ul li{
+  margin-left:1rem;
+  color: inherit;
+}
+
+ul li a{
+  margin-left:1rem;
+  color: black;
+  text-decoration: none;
+  font-family: Karla;
+  font-size: 1.1em;
+}

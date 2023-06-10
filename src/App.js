@@ -1,12 +1,13 @@
 import "./App.css";
-import Navbar from './components/Topbar';
-
+import Topbar from './layouts/Topbar/Topbar';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <div className="App">Home Page</div>;
+      <Topbar />
+      <Hero />
+      <div className="App"></div>;
     </div>
   );
 }

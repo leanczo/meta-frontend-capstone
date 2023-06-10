@@ -1,14 +1,14 @@
 import React from "react";
 import "./Topbar.css";
-import Logo from "../assets/Logo.svg";
+import Logo from "../../assets/Logo.svg";
 
 const Topbar = () => {
   return (
     <header className="topbar">
       <div className="logo">
-        <img src={Logo} alt="logo" />
+        <img src={Logo} alt="logo" height={50} />
       </div>
-      <nav>
+      <nav className="nav">
         <ul>
           <li>
             <a href="/" className="link">
