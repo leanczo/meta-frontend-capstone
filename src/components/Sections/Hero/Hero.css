@@ -1,0 +1,36 @@
+.hero {
+  background: #495e57;
+  height: 400px;
+  padding: 2rem 14rem 2rem 14rem;
+  display: grid;
+  align-items: center;
+  grid-column-gap: 2rem;
+  grid-template: 'info image';
+}
+
+h1 {
+  color: #f4ce14;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  height: 20rem;
+  justify-self: end;
+  border-radius: 1rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.info {
+    grid-area: info;
+}

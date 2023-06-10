@@ -1,6 +1,6 @@
 import "./App.css";
 import Topbar from './layouts/Topbar/Topbar';
-import Hero from './components/Hero/Hero';
+import Hero from './components/Sections/Hero/Hero';
 
 function App() {
   return (
