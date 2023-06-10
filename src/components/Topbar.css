@@ -1,0 +1,13 @@
+.topbar {
+  justify-content:center;
+  background-color: red;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo {
+  height: 40px;
+}
+
