@@ -45,3 +45,21 @@
   justify-content: center;
   width: 100%;
 }
+
+input, select {
+  height: 2.5rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
+  outline: none;
+  border: 0.0625rem solid #E0E0E0;
+  border-radius: 0.375rem;
+  background: #FFFFFF;
+  color: #495E57;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-width: 0.125rem;
+  border-color: #495E57;
+}

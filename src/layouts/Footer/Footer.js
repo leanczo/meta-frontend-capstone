@@ -24,6 +24,9 @@ const Footer = () => {
         </div>
         <div className="footer-social">
           <p className="footer-title"> SOCIAL MEDIA LINKS</p>
+          <p className="footer-item"> Facebook</p>
+          <p className="footer-item"> Instagram</p>
+          <p className="footer-item"> Twitter</p>
         </div>
       </div>
     </footer>
