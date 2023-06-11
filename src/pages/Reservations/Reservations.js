@@ -5,6 +5,8 @@ import BookingForm from "../../components/BookingForm/BookingForm";
 import Popup from "../../components/Popup/Popup";
 import { useNavigate } from "react-router-dom";
 import pages from "../../utils/pages";
+import { useReducer } from "react";
+import { fetchAPI } from "../../utils/Api";
 
 const Reservations = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -23,11 +25,29 @@ const Reservations = () => {
     }
   };
 
+  const updateTimes = (availableTimes, date) => {
+    const response = fetchAPI(new Date(date));
+    return response.length !== 0 ? response : availableTimes;
+  };
+
+  const initializeTimes = (initialAvailableTimes) => [
+    ...initialAvailableTimes,
+    ...fetchAPI(new Date()),
+  ];
+
+  const [availableTimes, dispatchOnDateChange] = useReducer(
+    updateTimes,
+    [],
+    initializeTimes
+  );
+
   return (
-    <div className="reservation">
+    <div data-testid="reservations-component" className="reservation">
       <div className="reservation-card">
         <h1 className="reservation-title">Table reservation</h1>
         <BookingForm
+          availableTimes={availableTimes}
+          dispatchOnDateChange={dispatchOnDateChange}
           onFormSubmit={handleFormSubmit}
           isFormSubmitted={isFormSubmitted}
         />

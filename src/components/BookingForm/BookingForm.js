@@ -1,17 +1,26 @@
-// BookingForm.js
 import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import "./BookingForm.css";
 
-const BookingForm = ({ onFormSubmit, isFormSubmitted }) => {
+const BookingForm = ({
+  onFormSubmit,
+  isFormSubmitted,
+  availableTimes,
+  dispatchOnDateChange
+}) => {
+  const defaultTime = availableTimes[0];
+  
   const [formValues, setFormValues] = useState({
     date: "",
-    time: "",
+    time: defaultTime,
     people: "",
     occasion: "",
   });
 
   const handleInputChange = (e) => {
+    if (e.target.name === 'date') {
+      dispatchOnDateChange(e.target.value);
+    }
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value,
@@ -39,13 +48,19 @@ const BookingForm = ({ onFormSubmit, isFormSubmitted }) => {
         <label htmlFor="time" className="containter-item-title">
           Time
         </label>
-        <input
-          type="time"
+        <select
           id="time"
           name="time"
+          value={formValues.time}
           onChange={handleInputChange}
           className={isFormSubmitted && !formValues.time ? "error" : ""}
-        />
+        >
+          {availableTimes.map(time => 
+            <option key={time}>
+              {time}
+            </option>
+          )}
+        </select>
       </div>
       <div className="reservation-container">
         <label htmlFor="people" className="containter-item-title">
