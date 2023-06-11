@@ -1,14 +1,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./Footer";
 
 describe("Footer component", () => {
   test("renders the Footer component with correct links and contact information", () => {
     render(
-      <Router>
         <Footer />
-      </Router>
     );
 
     // Check if the logo is rendered
