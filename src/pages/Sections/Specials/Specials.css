@@ -23,3 +23,33 @@
 .specials-title {
   line-height: 10px;
 }
+
+@media screen and (max-width: 767px) {
+  .specials {
+    height: 100%;
+    padding: 2.5rem 0;
+    max-width: 65rem;
+    margin: 0 auto;
+  }
+
+  .header-container {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 2rem;
+    grid-template: "info image";
+    grid-template-columns: 85fr 15fr;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .header-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .specials-title {
+    line-height: 10px;
+  }
+}

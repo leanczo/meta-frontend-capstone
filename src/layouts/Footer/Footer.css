@@ -58,6 +58,75 @@
     color: white;
   }
   100% {
-    color: #F4CE14; 
+    color: #f4ce14;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    background: #495e57;
+    height: 100%;
+    width: 100%;
+  }
+
+  .footer-container {
+    display: grid;
+    padding: 2rem 0rem;
+    margin: 0 auto;
+    grid-template-columns: 40fr 60fr;
+    height: 100%;
+    width: 100%;
+    grid-template-areas: "icon sitemap";
+    grid-column-gap: 0.25rem;
+  }
+
+  .footer-logo {
+    height: 170px;
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .footer-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+  }
+  .footer-site-map {
+    grid-area: sitemap;
+    align-self: start;
+  }
+
+  .footer-contact {
+    grid-area: contact;
+    display: none;
+  }
+
+  .footer-social {
+    grid-area: social;
+    display: none;
+  }
+
+  .footer-item {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: white;
+    display: flex;
+  }
+
+  .footer-item:hover {
+    animation-name: colorChange;
+    animation-duration: 1s;
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: white;
+    }
+    100% {
+      color: #f4ce14;
+    }
   }
 }

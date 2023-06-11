@@ -1,7 +1,7 @@
 .topbar {
   justify-content: space-between;
   background-color: white;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   height: 4rem;
@@ -17,22 +17,72 @@ li {
   list-style-type: none;
 }
 
-nav{
+nav {
   display: flex;
 }
 
-ul{
+ul {
   display: flex;
 }
-ul li{
-  margin-left:1rem;
+
+ul li {
+  margin-left: 1rem;
   color: inherit;
 }
 
-ul li a{
-  margin-left:1rem;
+ul li a {
+  margin-left: 1rem;
   color: black;
   text-decoration: none;
   font-family: Karla;
   font-size: 1.1em;
+}
+.menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .topbar {
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    position: fixed;
+    margin-bottom:96px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav.open .menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  ul li a {
+    margin-left: 1rem;
+    color: #495e57;
+    text-decoration: none;
+    font-family: Karla;
+    font-size: 1.1em;
+  }
 }

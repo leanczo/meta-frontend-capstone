@@ -35,3 +35,18 @@
   width: 50px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 767px) {
+  .testimonial-card {
+    background: white;
+    border-radius: 16px;
+    height: 100%;
+    min-height: 10rem;
+    width: 18rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
