@@ -20,6 +20,9 @@ Check out the live version of the website! [View Live Demo](https://littlelemon.
 
 In the project directory, you can run:
 
+### `npm install`
+The npm install command is used to install all the dependencies defined in your project's package.json file. 
+
 ### `npm start`
 
 Runs the app in development mode.\
