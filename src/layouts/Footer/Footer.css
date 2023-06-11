@@ -41,7 +41,23 @@
   grid-area: social;
 }
 
-.footer-item{
-    margin: 0.5rem 0;
+.footer-item {
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
 
+.footer-item:hover {
+  animation-name: colorChange;
+  animation-duration: 1s;
+}
+
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #F4CE14; 
+  }
 }

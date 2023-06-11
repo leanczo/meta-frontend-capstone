@@ -9,11 +9,31 @@ import pages from "../../utils/pages";
 const Reservations = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const navigate = useNavigate();
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [formValues, setFormValues] = useState({
+    date: "",
+    time: "",
+    people: "",
+    occasion: "",
+  });
 
+  const handleInputChange = (e) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
+  };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setIsPopupVisible(true);
-  }
+    setIsFormSubmitted(true);
+    const areAllFieldsFilled = Object.values(formValues).every(
+      (value) => value
+    );
+
+    if (areAllFieldsFilled) {
+      setIsPopupVisible(true);
+    }
+  };
 
   const minGuest = 1;
   const maxGuest = 10;
@@ -27,25 +47,50 @@ const Reservations = () => {
             <label htmlFor="date" className="containter-item-title">
               Date
             </label>
-            <input type="date" id="date" name="date" />
+            <input
+              type="date"
+              id="date"
+              name="date"
+              onChange={handleInputChange}
+              className={isFormSubmitted && !formValues.date ? "error" : ""}
+            />
           </div>
           <div className="reservation-container">
             <label htmlFor="time" className="containter-item-title">
               Time
             </label>
-            <input type="time" id="time" name="time" />
+            <input
+              type="time"
+              id="time"
+              name="time"
+              onChange={handleInputChange}
+              className={isFormSubmitted && !formValues.time ? "error" : ""}
+            />
           </div>
           <div className="reservation-container">
             <label htmlFor="people" className="containter-item-title">
               Number of people
             </label>
-            <input type="number" id="people" name="people" min={minGuest} max={maxGuest} />
+            <input
+              type="number"
+              id="people"
+              name="people"
+              min={minGuest}
+              max={maxGuest}
+              onChange={handleInputChange}
+              className={isFormSubmitted && !formValues.people ? "error" : ""}
+            />
           </div>
           <div className="reservation-container">
             <label htmlFor="occasion" className="containter-item-title">
               Occasion
             </label>
-            <select id="occasion" name="occasion">
+            <select
+              id="occasion"
+              name="occasion"
+              onChange={handleInputChange}
+              className={isFormSubmitted && !formValues.occasion ? "error" : ""}
+            >
               <option value="birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
               <option value="business">Business</option>
@@ -53,10 +98,7 @@ const Reservations = () => {
             </select>
           </div>
           <div className="reservation-button">
-            <Button
-              title="Book a table"
-              type="submit"
-            />
+            <Button title="Book a table" type="submit" />
           </div>
         </form>
       </div>

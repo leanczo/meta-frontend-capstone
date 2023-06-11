@@ -2,6 +2,8 @@ import React from "react";
 import "./Specials.css";
 import Button from "../../../components/Button/Button";
 import FoodCard from "../../../components/FoodCard/FoodCard";
+import { useNavigate } from "react-router-dom";
+import pages from "../../../utils/pages";
 
 const specials = [
   {
@@ -31,11 +33,16 @@ const specials = [
 ];
 
 const Specials = () => {
+  const navigate = useNavigate();
+
+  const onClickMenu = () => {
+    navigate(pages.get("orders").path);
+  }
   return (
     <div className="specials">
       <div className="header-container">
         <h1 className="specials-title">Specials</h1>
-        <Button title={"Online Menu"} />
+        <Button title={"Online Menu"} onClick={onClickMenu}/>
       </div>
 
       <div className="header-list">

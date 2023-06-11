@@ -63,3 +63,7 @@ input:focus, select:focus {
   border-width: 0.125rem;
   border-color: #495E57;
 }
+
+.error {
+  border: 1px solid red !important;
+}

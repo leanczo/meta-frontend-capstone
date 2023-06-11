@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../../assets/logo-white.png";
+import { Link } from "react-router-dom"; 
 
 const Footer = () => {
   return (
@@ -9,12 +10,12 @@ const Footer = () => {
         <img className="footer-logo" src={Logo} alt="logo-footer"></img>
         <div className="footer-site-map">
           <p className="footer-title"> SITEMAP</p>
-          <p className="footer-item"> Home</p>
-          <p className="footer-item"> About</p>
-          <p className="footer-item"> Menu</p>
-          <p className="footer-item"> Reservations</p>
-          <p className="footer-item"> Order Online</p>
-          <p className="footer-item"> Login</p>
+          <Link className="footer-item" to="/">Home</Link>
+          <Link className="footer-item" to="/about">About</Link>
+          <Link className="footer-item" to="/menu">Menu</Link>
+          <Link className="footer-item" to="/reservations">Reservations</Link>
+          <Link className="footer-item" to="/order-online">Order Online</Link>
+          <Link className="footer-item" to="/login">Login</Link>
         </div>
         <div className="footer-contact">
           <p className="footer-title"> CONTACT</p>
@@ -24,12 +25,13 @@ const Footer = () => {
         </div>
         <div className="footer-social">
           <p className="footer-title"> SOCIAL MEDIA LINKS</p>
-          <p className="footer-item"> Facebook</p>
-          <p className="footer-item"> Instagram</p>
-          <p className="footer-item"> Twitter</p>
+          <a className="footer-item" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a className="footer-item" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a className="footer-item" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
       </div>
     </footer>
   );
 };
+
 export default Footer;
