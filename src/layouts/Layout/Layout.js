@@ -1,13 +1,14 @@
 import Topbar from '../Topbar/Topbar';
 import Footer from '../Footer/Footer';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <Router>
       <Topbar />
-      <main>{children}</main>
+      <main data-testid="main-content">{children}</main>
       <Footer />
-    </>
+    </Router>
   );
 };
 

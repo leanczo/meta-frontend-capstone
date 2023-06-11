@@ -4,7 +4,7 @@ import starIcon from "../../assets/star.svg";
 
 const TestimonialCard = ({ author, description, image, rating }) => {
   return (
-    <div className="testimonial-card">
+    <div className="testimonial-card" data-testid="testimonial-card">
       <div className="testimonial-rating">
         {rating &&
           [...Array(rating)].map((_, index) => (

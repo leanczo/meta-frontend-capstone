@@ -11,8 +11,8 @@ import Reservations from "./pages/Reservations/Reservations";
 
 const App = () => {
   return (
-    <>
-      <Layout>
+    <div data-testid="app-component">
+      <Layout >
         <Routes>
           <Route path={pages.get("home").path} element={<Home />} />
           <Route path={pages.get("about").path} element={<About />} />
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
-    </>
+    </div>
   );
 }
 

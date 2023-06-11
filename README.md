@@ -24,3 +24,11 @@ In the project directory, you can run:
 
 Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm test`
+Launches the test runner in the interactive watch mode.
+It runs all the tests for the application and provides feedback on their status.
+
+The test files are typically located in a directory named __tests__ or have a .test.js or .spec.js extension.
+
+Make sure to write comprehensive tests to ensure the stability and correctness of the application.

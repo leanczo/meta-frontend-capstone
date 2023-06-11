@@ -6,4 +6,5 @@ const Orders = () => {
     <UnderConstruction />
   );
 };
+
 export default Orders;
