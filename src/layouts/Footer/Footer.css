@@ -1,0 +1,47 @@
+.footer {
+  background: #495e57;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-container {
+  display: grid;
+  padding: 2rem 0;
+  max-width: 65rem;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  grid-template-areas: "icon sitemap contact social";
+  grid-column-gap: 1.5rem;
+}
+
+.footer-logo {
+  height: 170px;
+  object-fit: contain;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+.footer-site-map {
+  grid-area: sitemap;
+  align-self: start;
+}
+
+.footer-contact {
+  grid-area: contact;
+}
+
+.footer-social {
+  grid-area: social;
+}
+
+.footer-item{
+    margin: 0.5rem 0;
+
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import UnderConstruction from "../Sections/UnderConstruction/UnderConstruction";
 
-const Orders = () => {
+const About = () => {
   return (
     <UnderConstruction />
   );
 };
-export default Orders;
+export default About;

@@ -1,0 +1,47 @@
+.reservation {
+  height: calc(100vh - 96px - 266px);
+  width: 100vw;
+  max-width: 65rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-card {
+  background: #495e57;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 50%;
+}
+
+.reservation-title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  background: #495e57;
+  color: #fff;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.containter-item-title {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.reservation-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
