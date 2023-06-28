@@ -54,8 +54,8 @@
 
 .food-card-delivery {
   display: flex;
-  justify-content: start;
-  align-content: end;
+  justify-content: flex-start;
+  align-content: flex-end;
   margin-top: 1rem;
 }
 
